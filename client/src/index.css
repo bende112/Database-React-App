@@ -1,0 +1,8 @@
+body {
+  background-color: rgb(220, 210, 230);
+}
+
+nav a {
+  background-color: aqua;
+  padding: 6px;
+}
