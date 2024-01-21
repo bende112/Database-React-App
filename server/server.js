@@ -33,7 +33,5 @@ app.get("/tags", async (request, response) => {
   response.json(result.rows);
 });
 
-
-
 app.listen(PORT, () => console.log(`App is running on PORT ${PORT}`));
 
