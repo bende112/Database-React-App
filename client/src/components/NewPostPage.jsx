@@ -1,4 +1,4 @@
-import { useState ,useEffect } from "react";
+import { useState } from "react";
 
 
 export default function NewPostPage() {
@@ -11,7 +11,6 @@ export default function NewPostPage() {
     const formData = new FormData();
     const formValues = Object.fromEntries(formData);
 
-    // send the post to the API
     const response = await fetch("http://localhost:8080/posts", {
       method: "POST",
       headers: {
@@ -21,18 +20,10 @@ export default function NewPostPage() {
     });
     const json = await response.json();
     console.log(json);
-
-    // async function postPosts() {
-    //   const response = await fetch("http://localhost:8080/posts");
-    //   const poste = await response.json();
-    // }
-    // postPosts();
-
   }
 
   return (
     <div>
-      {/* <button onClick={}>New Post</button> */}
       <form onSubmit={handleSubmit}>
         <label htmlFor="title">Title</label>
         <input type={title} onChange={(event) =>setTitle(event.target.value)} placeholder="type here" />
